@@ -1,70 +1,117 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-  <!-- Required meta tags -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   
-    <!-- link to icon -->
-  <link rel="icon" href="https://celebsupdate.com/wp-content/uploads/2020/09/set1-12.png">
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" integrity="sha384-rbsA2VBKQhggwzxH7pPCaAqO46MgnOM80zW1RWuH61DGLwZJEdK2Kadq2F9CUG65" crossorigin="anonymous">
-  
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.1/css/fontawesome.min.css" integrity="sha384-QYIZto+st3yW+o8+5OHfT6S482Zsvz2WfOzpFSXMF9zqeLcFV0/wlZpMtyFcZALm" crossorigin="anonymous">
-  
-    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
-  
-  <title>Bootstrap 5 Template Starter</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="icon" href="https://www.kindpng.com/picc/m/1-10104_download-png-movie-icon-flat-movie-icon-png.png">
+  <link rel="stylesheet" href="/css/style.css">
+  <title>movidb</title>
 </head>
 <body>
+  <div class="container-fluid text-center">
+    <h4 style="padding-top: 50px;">Let's load some Movie DB information</h4>
+    <hr>
+    <input id="moviesearchinputbox" type="text">
+    <hr>
+    <button button type="button" class="btn btn-primary" id="searchclickbutton" onclick="searchformovie()">click to
+      search</button>
+    <button type="button" class="btn btn-info" id="searchclickbutton" onclick="searchforrandommovie()">random
+      movie</button>
+  </div>
+  <div class="container-fluid text-center">
+    <br>
+    <h1 id="sample_movietitle"></h1>
+    <br>
+    <img id="sample_movieimage" src="https://th.bing.com/th/id/OIP.Mzmmv3oX9EC0m1OKFK355AHaEK?pid=ImgDet&rs=1" class="img-fluid" alt="..."
+      id="imgfromnasafetch">
+
+    <hr>
+
+    <p class="lead tagline" id="sample_tagline">
+      movie details
+    </p>
+    <hr>
+    <div class="text-center plotsummary">
+      <p class="lead">
+        plot summary
+      </p>
+      <p class="lead " id="sample_plotsummary">
+        plot summary
+      </p>
+    </div>
+    
+    <hr>
+    <div class="text-center movieinfo">
+      <div class="row">
+        <div class="col">
+          <p id="sample_release_date">Genre</p>
+        </div>
+        <div class="col">
+          <p id="sample_revenue">Production Companies</p>
+        </div>
+        <div class="col">
+          <p id="sample_runtime">Genre</p>
+        </div>
+        <div class="col">
+          <p id="sample_vote_average">Genre</p>
+
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <div class="text-center ">
+      <div class="row">
+        <div class="col-md-6 listnumberone">
+          <p>Genre</p>
+          <ul class="list-group" id="sample_genrelist">
+          </ul>
+        </div>
+        <div class="col-md-6 listnumberone">
+          <p>Production Companies</p>
+          <ul class="list-group" id="sample_productioncompanies">
+          </ul>
+        </div>
+      </div>
+    </div>
+
+    <hr>
+    <p class="lead">
+      Most Popular Images
+    </p>
+    
+    <div class="container-fluid text-center">
+      <div class="imagepadding">
+        <div class="cocoen" data-start="30">
+          <img id="cocoensliderone" src="https://wallsdesk.com/wp-content/uploads/2016/09/Ameesha-Patel-Desktop.jpg"
+            alt="" />
+          <img id="cocoenslidertwo" src="https://wallsdesk.com/wp-content/uploads/2016/09/Ameesha-Patel-Photos.jpg"
+            alt="" />
+        </div>
+      </div>
+    </div>
+    <hr>
+    <div class="container-fluid text-center websitelink">
+      <p class="lead">movie <a href="" id="moviewebsitehref">website </a></p>
+    </div>
+    <hr>
+  </div>
 
   <div class="container-fluid text-center">
-    <h1>Hello There.This is Ameesha Patel</h1>
-    <figure class="text-center">
-      <blockquote class="blockquote">
-        <p>My mind, rebels at stagnation. Give me problems, give me work, give me the most abstruse cryptogram or the most intricate analysis, and I am in my own proper atmosphere. I can dispense then with artificial stimulants. But I abhor the dull routine of existence. I crave for mental exaltation. That is why I have chosen my own particular profession,—or rather created it, for I am the only one in the world</p>
-      </blockquote>
-      <figcaption class="blockquote-footer">
-        Sherlock Holmes<cite title="Source Title">. The Sign of the Four</cite>
-      </figcaption>
-    </figure>
-    <hr>
-    <!-- jernej-graj-MdTe1mXvNMg-unsplash -->
-    <img src="https://wallsdesk.com/wp-content/uploads/2016/09/Ameesha-Patel-Pictures.jpg" class="img-fluid" alt="...">
     <p>
-      Photo by <a href="https://unsplash.com/@jernejgraj?utm_source=unsplash&utm_medium=referral&utm_content=creditCopyText">
-WallsDesk.com </a> on <a href="hhttps://wallsdesk.com/ameesha-patel-43995/">Walls Desk</a>
-    </p>
-    <p class="lead">
-      This is a lead paragraph. It stands out from regular paragraphs.
-    </p>
-    <hr>
-    <div class="row">
-      <div class="col">
-        Column
-      </div>
-      <div class="col">
-        Column
-      </div>
-      <div class="col">
-        Column
-      </div>
-    </div>    
-    <hr>
-    <p class="lead">
-      If you are seeing this in the center of the page, Sherlock Holmes in light gray, with italicized novel name, then, bootstrap 5 is working as expected.
-    </p>
-  </div>
-  <div class="container-fluid text-center">
-        <p>
-      Follow Me on <a href="https://github.com/Jay-study-nildana">GitHub</a>
+      Follow Me on <a href="https://github.com/shaikhanis">GitHub</a>
     </p>
   </div>
 
-  <!-- Optional JavaScript; choose one of the two! -->
-
+<!-- import swaper liberery -->
+  <script src="https://unpkg.com/cocoen/dist/cocoen.js" type="text/javascript"></script>
   <script src="script.js" type="text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
 </body>
-</html> 
+
+</html>
