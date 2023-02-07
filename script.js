@@ -16,7 +16,7 @@ let movietitle = document.getElementById(`movietitle`);
 function LetsCallAPIFetchMovieDBwithMovieID(movieid) {
   console.log(`Entering  LetsCallAPIFetchMovieDBwithMovieID ${movieid}`);
   //show the loading image.
-  imgfromnasafetch.src = `images/mike-van-den-bos-jf1EomjlQi0-unsplash.jpg`;
+  imgfromnasafetch.src = src= "https://i.ytimg.com/vi/PlaYMh-u-2w/maxresdefault.jpg";
 
   let baseURL = `https://api.themoviedb.org/3/movie/${movieid}?api_key=${movieAPIkey}`;
   // let extraString = `&language=en-US&query=${query}&page=1&include_adult=false`
@@ -61,7 +61,7 @@ function LetsCallAPIFetchMovieDBImagesWithMovieID(movieid) {
 function LetsCallAPIFetchMovieDBWithQuery(query) {
     console.log(`Entering  LetsCallAPIFetchMovieDBWithQuery`);
     //show the loading image.
-    imgfromnasafetch.src = `images/mike-van-den-bos-jf1EomjlQi0-unsplash.jpg`;
+    imgfromnasafetch.src = src= "https://i.ytimg.com/vi/PlaYMh-u-2w/maxresdefault.jpg";
   
     //https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&query=avengers&page=1&include_adult=false
     let baseURL = `https://api.themoviedb.org/3/search/movie?api_key=${movieAPIkey}`;
@@ -246,16 +246,7 @@ moviesearchinputbox.addEventListener("keypress", function (event) {
 
 function searchforrandommovie() {
   console.log(`Leaving  searchforrandommovie`);
-  let listOfRandomMovieStuff = [
-    "basic",
-    "baywatch",
-    "indiana jones",
-    "phantom",
-    "mission impossible",
-    "joker",
-    "batman",
-    "tomb raider",
-  ];
+  let listOfRandomMovieStuff =generateRandomLetter();
 
   // Returns a random integer from 0 to 9:
 
@@ -270,4 +261,10 @@ function searchforrandommovie() {
   console.log(`Leaving  LetsCallAPIFetchMovieDBWithQuery`);
 
   LetsCallAPIFetchMovieDBWithQuery(inputmoviequery);
+}
+
+function generateRandomLetter() {
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+
+  return alphabet[Math.floor(Math.random() * alphabet.length)]
 }
