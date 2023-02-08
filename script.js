@@ -1,9 +1,7 @@
 // to load the swqapper liberary 
-Cocoen.parse(document.body);
 //
 // api kye and base
-let movieAPIkey = "dd29e99983b1e773538ca109e351908b";
-let imageURLBase = "https://www.themoviedb.org/t/p/original/";
+
 
 //initial load
 
@@ -244,6 +242,13 @@ moviesearchinputbox.addEventListener("keypress", function (event) {
   }
 });
 
+
+function generateRandomLetter() {
+  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
+
+  return alphabet[Math.floor(Math.random() * alphabet.length)]
+}
+
 function searchforrandommovie() {
   console.log(`Leaving  searchforrandommovie`);
   let listOfRandomMovieStuff =generateRandomLetter();
@@ -261,10 +266,4 @@ function searchforrandommovie() {
   console.log(`Leaving  LetsCallAPIFetchMovieDBWithQuery`);
 
   LetsCallAPIFetchMovieDBWithQuery(inputmoviequery);
-}
-
-function generateRandomLetter() {
-  const alphabet = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789"
-
-  return alphabet[Math.floor(Math.random() * alphabet.length)]
 }
