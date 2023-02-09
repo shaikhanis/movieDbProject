@@ -1,7 +1,10 @@
 // to load the swqapper liberary 
-//
+console.log('anis');
+Cocoen.parse(document.body);
 // api kye and base
-
+let movieAPIkey = "dd29e99983b1e773538ca109e351908b";
+let imageURLBase = `https://www.themoviedb.org/t/p/original/`;
+//initial load
 
 //initial load
 
@@ -14,7 +17,7 @@ let movietitle = document.getElementById(`movietitle`);
 function LetsCallAPIFetchMovieDBwithMovieID(movieid) {
   console.log(`Entering  LetsCallAPIFetchMovieDBwithMovieID ${movieid}`);
   //show the loading image.
-  imgfromnasafetch.src = src= "https://i.ytimg.com/vi/PlaYMh-u-2w/maxresdefault.jpg";
+  imgfromnasafetch.src = `images/mike-van-den-bos-jf1EomjlQi0-unsplash.jpg`;
 
   let baseURL = `https://api.themoviedb.org/3/movie/${movieid}?api_key=${movieAPIkey}`;
   // let extraString = `&language=en-US&query=${query}&page=1&include_adult=false`
@@ -59,7 +62,7 @@ function LetsCallAPIFetchMovieDBImagesWithMovieID(movieid) {
 function LetsCallAPIFetchMovieDBWithQuery(query) {
     console.log(`Entering  LetsCallAPIFetchMovieDBWithQuery`);
     //show the loading image.
-    imgfromnasafetch.src = src= "https://i.ytimg.com/vi/PlaYMh-u-2w/maxresdefault.jpg";
+    imgfromnasafetch.src = `images/mike-van-den-bos-jf1EomjlQi0-unsplash.jpg`;
   
     //https://api.themoviedb.org/3/search/movie?api_key=<<api_key>>&language=en-US&query=avengers&page=1&include_adult=false
     let baseURL = `https://api.themoviedb.org/3/search/movie?api_key=${movieAPIkey}`;
