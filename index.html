@@ -14,34 +14,34 @@
 </head>
 <body>
   <div class="container-fluid text-center">
-    <h1 class="text-centerc mt-3" style="color: rgb(104, 202, 14);">Movie DB App</h1>
+    <h1 class="text-centerc mt-3" style="color: rgb(79, 218, 10); background-color: black;">Movie DB App</h1>
     <h4 style="padding-top: 50px;">Let's load some Movie DB information</h4>
     <hr>
-    <input id="moviesearchinputbox" type="text">
+    <input id="movieInput" type="text">
     <hr>
-    <button button type="button" class="btn btn-primary" id="searchclickbutton" onclick="searchformovie()">click to
+    <button button type="button" class="btn btn-primary" id="searchclickbutton" onclick="search()">click to
       search</button>
-    <button type="button" class="btn btn-info" id="searchclickbutton" onclick="searchforrandommovie()">random
+
+    <button type="button" class="btn btn-info" id="searchclickbutton" onclick="randomSearch()">random
       movie</button>
+
   </div>
+
   <div class="container-fluid text-center">
     <br>
-    <h1 id="sample_movietitle"></h1>
+    <h1 id="title">I am IronMan</h1>
     <br>
-    <img id="sample_movieimage" src="https://th.bing.com/th/id/OIP.Mzmmv3oX9EC0m1OKFK355AHaEK?pid=ImgDet&rs=1" class="img-fluid" alt="..."
-      id="imgfromnasafetch">
-
+    <img id="bannerImage" src="https://th.bing.com/th/id/OIP.rFuKC-tnrskbjKlB84N90wHaEc?pid=ImgDet&rs=1" class="img-fluid" alt="...">
     <hr>
 
-    <p class="lead tagline" id="sample_tagline">
-      movie details
-    </p>
+    <p class="lead tagline" ><span>Movie Details...</span><br><span id="tagline"></span></p>
     <hr>
+
     <div class="text-center plotsummary">
       <p class="lead">
         plot summary
       </p>
-      <p class="lead " id="sample_plotsummary">
+      <p class="lead " id="plotsummary">
         plot summary
       </p>
     </div>
@@ -50,69 +50,35 @@
     <div class="text-center movieinfo">
       <div class="row">
         <div class="col">
-          <p id="sample_release_date">Genre</p>
+          <p id="release_date">Genre</p>
         </div>
         <div class="col">
-          <p id="sample_revenue">Production Companies</p>
+          <p id="revenue">Production Companies</p>
         </div>
         <div class="col">
-          <p id="sample_runtime">Genre</p>
+          <p id="runtime">Genre</p>
         </div>
         <div class="col">
-          <p id="sample_vote_average">Genre</p>
+          <p id="vote_average">Genre</p>
 
         </div>
       </div>
     </div>
-
-    <hr>
-    <div class="text-center ">
-      <div class="row">
-        <div class="col-md-6 listnumberone">
-          <p>Genre</p>
-          <ul class="list-group" id="sample_genrelist">
-          </ul>
-        </div>
-        <div class="col-md-6 listnumberone">
-          <p>Production Companies</p>
-          <ul class="list-group" id="sample_productioncompanies">
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <hr>
-    <p class="lead">
-      Most Popular Images
-    </p>
-    
-    <div class="container-fluid text-center">
-      <div class="imagepadding">
-        <div class="cocoen" data-start="30">
-          <img id="cocoensliderone" src="https://hdqwalls.com/wallpapers/i-am-iron-man-4k-ky.jpg"
-            alt="" />
-          <img id="cocoenslidertwo" src="https://th.bing.com/th/id/OIP.Qw8jPntPFW1MwgiWQfdZ0gHaFj?pid=ImgDet&w=1152&h=864&rs=1"
-            alt="" />
-        </div>
-      </div>
-    </div>
-    <hr>
-    <div class="container-fluid text-center websitelink">
-      <p class="lead">movie <a href="" id="moviewebsitehref">website </a></p>
-    </div>
+    <hr><p class="lead">Most Popular Images</p>
+    <img id="bannerImage2" src="https://th.bing.com/th/id/OIP.Mzmmv3oX9EC0m1OKFK355AHaEK?pid=ImgDet&rs=1" class="img-fluid" alt="" />
     <hr>
   </div>
 
   <div class="container-fluid text-center">
-    <p>
+    <p class="follow">
       Follow Me on <a href="https://github.com/shaikhanis">GitHub</a>
     </p>
   </div>
-
+<hr>
 <!-- import swaper liberery -->
   <script src="https://unpkg.com/cocoen/dist/cocoen.js" type="text/javascript"></script>
-  <script src="script.js" type="text/javascript"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-kenU1KFdBIe4zVF0s0G1M5b4hcpxyD9F7jL+jjXkk+Q2h455rYXK/7HAuoJl+0I4" crossorigin="anonymous"></script>
+<script src="index.js" type="text/javascript"></script>
 </body>
 
 </html>

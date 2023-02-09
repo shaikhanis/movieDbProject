@@ -1,30 +1,47 @@
 html,body{
-  background-color: rgb(246, 229, 208);
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  background: linear-gradient(60deg, rgb(73, 217, 2) 30%, rgb(16, 9, 218) 30%,rgb(205, 18, 8) 100%);
+  font-family:Arial, Helvetica, sans-serif;
 }
 
 .tagline {
-  border: 10px solid rebeccapurple;
+  border: 10px solid rgb(220, 199, 242);
+  border-radius: 15%;
+  padding: 2%;
 }
 
 .plotsummary {
   border: 10px solid rgb(238, 174, 35);
+  border-radius: 15%;
+  padding: 2%;
 }
 
 .movieinfo {
-  border: 10px solid rgb(151, 42, 214);
+  border: 10px solid rgb(182, 160, 195);
+  color: red;
 }
 
 .listnumberone {
   border: 10px solid rgb(14, 238, 133);
+  border-radius: 15%;
+  padding: 2%;
 }
 
-/* .imagepadding {
-  margin-left: 100px;
-  margin-right: 100px;
-} */
-
 .websitelink {
-  border: 10px solid rgb(151, 224, 34);
-  padding-top: 15px;
+  border: 10px solid rgb(74, 83, 60);
+  border-radius: 35%;
+  padding: 5%;
+}
+
+.lead{
+  color: yellow;
+  background-color: cadetblue;
+  font-size: 200%;
+}
+
+.follow{
+  color:rgb(181, 230, 5);
+  background-color: rgb(27, 21, 186);
+  width: 20%;
+  height: 20%;
+  margin: auto auto;
 }
